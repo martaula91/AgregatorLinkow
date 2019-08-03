@@ -1,7 +1,61 @@
-﻿
+﻿@model IEnumerable<AgregatorLinkow.Models.Link>
+@*@model AgregatorLinkow.Models.Link*@
+
 @{
     ViewData["Title"] = "MyProfile";
 }
 
-<h2>MyProfile</h2>
+    <h2>MyProfile</h2>
 
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+
+            </th>
+            <th>
+                Tytuł:
+            </th>
+            <th>
+                Data dodania:
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var link in Model)
+        {
+            <tr>
+
+                @{ if (User.Identity.IsAuthenticated)
+                    {
+                        <td>
+                            <a asp-area="" asp-controller="Agregator" asp-action="AddPlus" asp-route-id="@link.Id">@Html.DisplayFor(modelItem => link.TotalityOfPluses)</a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+
+                            @Html.DisplayFor(modelItem => link.TotalityOfPluses)
+                        </td>
+                    }
+                }
+
+                <td>
+                    @Html.DisplayFor(modelItem => link.Title)
+
+                </td>
+                <td>
+                    <a href="@link.Url">@link.Url</a>
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => link.AddingDate)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

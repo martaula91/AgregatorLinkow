@@ -36,5 +36,5 @@ C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp
 C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\Razor\Views\Agregator\Index.g.cshtml.cs
 C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\Razor\Views\Agregator\Success.g.cshtml.cs
 C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\Razor\Views\Home\Test.g.cshtml.cs
-C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
 C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\Razor\Views\Agregator\MyProfile.g.cshtml.cs
+C:\Users\Marta\source\repos\AgregatorLinkow\AgregatorLinkow\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
