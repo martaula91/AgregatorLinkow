@@ -7,7 +7,6 @@ Entity Framework Core<br/>
 Wyświetlanie linkow dla użytkowników zalogowanych i niezalogowanych<br/>
 Dodawanie plusów tylko przez zalogowanych użytkowników<br/>
 Dodawanie linków tylko przez zalogowanych użytkowników<br/>
-Wyświetlanie linków nie starszych niż 5 dni<br/>
 
-#Baza danych:
+#Baza danych:<br/>
 aspnet-AgregatorLinkow-5D27031C-0E43-47CE-AD61-2EE0576F4E12.bak
