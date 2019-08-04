@@ -5,7 +5,11 @@
     ViewData["Title"] = "MyProfile";
 }
 
-    <h2>MyProfile</h2>
+    <h2>My profile</h2>
+
+    <div>
+        <a asp-area="" asp-controller="Agregator" asp-action="AddLink">Add link</a>
+    </div>
 
 <table class="table">
     <thead>
@@ -17,9 +21,11 @@
                 Tytuł:
             </th>
             <th>
+                Link:
+            </th>
+            <th>
                 Data dodania:
             </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -27,20 +33,12 @@
         {
             <tr>
 
-                @{ if (User.Identity.IsAuthenticated)
-                    {
-                        <td>
-                            <a asp-area="" asp-controller="Agregator" asp-action="AddPlus" asp-route-id="@link.Id">@Html.DisplayFor(modelItem => link.TotalityOfPluses)</a>
-                        </td>
-                    }
-                    else
-                    {
+                
                         <td>
 
                             @Html.DisplayFor(modelItem => link.TotalityOfPluses)
                         </td>
-                    }
-                }
+            
 
                 <td>
                     @Html.DisplayFor(modelItem => link.Title)
@@ -59,3 +57,7 @@
         }
     </tbody>
 </table>
+
+<div>
+    <a asp-action="Index">Wróc do listy linków</a>
+</div>

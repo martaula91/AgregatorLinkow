@@ -48,8 +48,16 @@
 
                             </td>
                             <td>
-                                <a href="@link.Url">@link.Url</a>
-
+                                @{
+                                    if (link.Url.StartsWith("http://") || link.Url.StartsWith("https://"))
+                                    {
+                                        <a href="@link.Url">@link.Url</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="//@link.Url">@link.Url</a>
+                                    }
+                                }
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => link.AddingDate)

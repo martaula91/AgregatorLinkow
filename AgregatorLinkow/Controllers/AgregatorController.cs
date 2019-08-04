@@ -47,7 +47,7 @@ namespace AgregatorLinkow.Controllers
                     Url = g.Url,
                     AddingDate = g.AddingDate,
                     CanAddPlus = User.Identity.IsAuthenticated && g.UserId != userId, //!(userLikes.Any(x => x.Link.LinkId == displayLink.Id
-                    Finish = false // g.AddingDate >= DateTime.Now.Date.AddDays(-5) //false //
+                    Finish = g.AddingDate < DateTime.Now.Date.AddDays(-5) //false //
                 };
             links.Add(linkToAdd);
              }
@@ -61,15 +61,10 @@ namespace AgregatorLinkow.Controllers
 
         public IActionResult MyProfile()
         {
-            var links = (
-                         //from u in db.User
-                         //join l in db.Link on u.Id equals l.UserId
-                         from l in db.Link
+            var links = (from l in db.Link
                          where l.UserId == User.Identity.GetUserId()
-                        //link.UserId = User.Identity.GetUserId();
                         select l).ToList();
 
-            //var links = db.Link.ToList();
             return View("MyProfile", links); //return View("Index", links);
 
         }
